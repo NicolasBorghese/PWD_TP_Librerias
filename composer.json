@@ -1,0 +1,20 @@
+{
+    "name": "user/pwd_tp_librerias",
+    "description": "PWD Grupo 02 Prueba de librerias",
+    "type": "project",
+    "require": {
+        "twbs/bootstrap-icons": "^1.11"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "User\\PWD_TP_Librerias\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "NicolasBorghese",
+            "email": "nicolasborghese@hotmail.com"
+        }
+    ]
+}
