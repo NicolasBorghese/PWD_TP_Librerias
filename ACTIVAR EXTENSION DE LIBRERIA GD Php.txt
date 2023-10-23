@@ -1,0 +1,7 @@
+ACTIVAR EXTENSION DE LIBRERIA GD PARA PH SI TIENES INSTADADO XAMMP
+
+1° Dirigirse ala carpeta de  de xampp 
+2° Ingresar ala carpeta htdocs.. y buscar la carpeta  php
+3° Buscar y editar el archivo  php.ini-development
+4° Burcar extension GD  y Quitarle el ";" 
+5° Guardar el archivo php.ini-development

@@ -3,37 +3,54 @@
 $tituloPagina = "Login Agenda Personal";
 $seccionActual = "login";
 
-include_once('../estructura/encabezado.php');
 include_once("../../configuracion.php");
-
+include_once('../estructura/encabezado.php');
 ?>
 
-<div class="container">
-    <div class="">
-        <div class="col-md-5 offset-md-3">
-            <div class="card mt-5 mb-5 shadow-lg">
-                <div class="card-header text-center">
-                    <h2 class="card-title">Inicio de sesión</h2>
-                </div>
-                <div class="card-body">
-                    <form action="validacionLogin.php" method="post" id="formulario" name="formulario" class="needs-validation row g-3" novalidate>
-                        <div class="col-md-12">
-                            <label for="usuario" class="form-label-lg">Dirección de Mail</label>
-                            <input type="text" class="form-control" id="usuario" required>
-                        </div>
-                        
-                        <div class="col-md-12">
-                            <label for="contrasenia" class="form-label-lg">Contraseña</label>
-                            <input type="text" class="form-control" id="contrasenia" required>
-                        </div>
-                        <div class="d-grid">
-                            <button class="btn btn-primary" type="submit">Acceder</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+<div class="fondoPagina colorGradiente">
+  <div class="contenedor-formulario d-flex justify-content-center">
+    <div class="container">
+
+      <form name="formularioLogin" id="formularioLogin" method="POST" class="needs-validation" novalidate>
+        
+        <div class="bg-light">
+          <h5 class="bi bi-box-arrow-in-down-left bg-gray text-blue p-2">Ingrese a su cuenta</h5>
         </div>
+
+        <div class="contenedor-dato">
+          <label for="direccionMail" class="form-label">Usuario</label>
+          <input type="text" class="form-control" id="direccionMail" name="direccionMail" placeholder="name@example.com">
+        </div>
+
+        <div class="contenedor-dato">
+          <label for="contrasenia" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="contrasenia" name="contrasenia">
+        </div>
+
+        <div class="contenedor-dato">
+          <label for="captcha" class="form-label">Captcha</label>
+          <input type="text" class="form-control" id="captcha" name="captcha">
+        </div>
+
+        <div class="contenedor-dato">
+          <img src="../../Control/captcha.php" id="imgcaptcha" alt="Imagen de captcha">
+          <button type="button" id="actualizarCaptcha" name="actualizarCaptcha" class="btn btn-secondary">Actualizar</button>
+        </div>
+
+        <div class="d-grid mb-3 gap-2">
+          <button type="submit" id="btn" class="btn btn-primary" name="btn">Login</button>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <a class="btn  btn-outline-info" href="../../index.php">Inicio</a>
+        </div>
+
+      </form>
     </div>
+  </div>
 </div>
 
 <script src="../estructura/js/validacionLogin.js"></script>
+
+<?php
+include_once('../estructura/pie.php');
+?>

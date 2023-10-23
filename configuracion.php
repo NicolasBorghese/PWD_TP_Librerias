@@ -15,7 +15,7 @@ $ROOT =$_SERVER['DOCUMENT_ROOT']."/$PROYECTO/";
 include_once($ROOT.'Utiles/funciones.php');
 
 // Variable que define la pagina de autenticacion del proyecto
-$INICIO = "Location:http://".$_SERVER['HTTP_HOST']."/$PROYECTO/Vista/html/login.php";
+$INICIO = "Location:http://".$_SERVER['HTTP_HOST']."/$PROYECTO/Vista/html/iniciarSesion.php";
 
 // variable que define la pagina principal del proyecto (menu principal)
 $PRINCIPAL = "Location:http://".$_SERVER['HTTP_HOST']."/$PROYECTO/Vista/html/home.php";

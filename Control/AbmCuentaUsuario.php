@@ -188,5 +188,30 @@ class AbmCuentaUsuario{
 
         return $colInfo;
     }
+
+    /**
+     * Valida si los datos para iniciar sesión son correctos
+     */
+    public function validarLogueo($param){
+
+        $exito = false;
+
+        $objCuenta = new CuentaUsuario();
+        $encontrado = $objCuenta -> listar($param);
+
+        if (count($encontrado) == 1){
+            $exito = true;
+        }
+
+        return $exito;
+    }
+
+    /**
+     * Cierra la sesión de la cuenta
+     */
+    public function cerrarSesion(){
+        session_destroy();
+        header("location: ../index.php");
+    }
 }  
 ?>
