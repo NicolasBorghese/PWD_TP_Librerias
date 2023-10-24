@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php
+
+$tituloPagina = "Login Agenda Personal";
+$seccionActual = "login";
+
+include_once("../../configuracion.php");
+include_once('../estructura/encabezado.php');
+?>
+
+
+<!--<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,7 +21,24 @@
     <title>Generador Currículum</title>
 </head>
 
-<body>
+<body>-->
+<div class="fondoPagina colorGradiente ">
+
+<div class="card">
+  <ul class="nav nav-underline">
+    <li class="nav-item">
+      <a class="nav-link" href="home.php">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Crear CV</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Calendario</a>
+    </li>
+  </ul>
+</div>
+
+<div class="contenedor-formulario d-flex justify-content-center">
     <div class="contenedor-formulario">
         <div class="container">
             <div class="bg-light">
@@ -101,6 +128,7 @@
             </div>
         </div>
     </div>
+</div>
 
     <script>
         //Desactivo envío de formularios con campos inválidos.

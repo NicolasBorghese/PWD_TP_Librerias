@@ -40,7 +40,7 @@ $(document).ready(function () {
 
     $("#formularioLogin").submit(function(event) {
 
-        event.preventDefault();
+        //event.preventDefault();
 
         var formData = $("#formularioLogin").serialize();
         var ruta = "../../Control/ajaxLogin.php";

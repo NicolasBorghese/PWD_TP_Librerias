@@ -1,7 +1,7 @@
 <?php
-require_once('../Librerias/tcpdf/tcpdf.php');
-include_once "../../Utiles/funciones.php";
-include_once "../../Control/Imagen.php";
+include_once "../../../Utiles/librerias/tcpdf/tcpdf.php";
+include_once "../../../Utiles/funciones.php";
+include_once "../../../Control/Imagen.php";
 
 if ($_FILES['imagen']["error"] <= 0) {
 
@@ -20,7 +20,7 @@ if ($_FILES['imagen']["error"] <= 0) {
     $nombreImagen = $_FILES['imagen']['name'];
     $esFormato = $verImagen->analizarArchivo($nombreImagen);
     if ($esFormato) {
-        $directorio = "../foto/"; //Ubicación donde se guarda la imagen de manera local
+        $directorio = "../../../Foto"; //Ubicación donde se guarda la imagen de manera local
         $nombreImagen = uniqid() . "_" . $imagen['name']; //Le da un único id a la imagen
         $ruta = $directorio . $nombreImagen; //Ruta del directorio
         move_uploaded_file($imagen['tmp_name'], $ruta); //Lo guarda en el directorio
@@ -59,7 +59,7 @@ if ($_FILES['imagen']["error"] <= 0) {
         </div>';
 
         //Agrega hojas de estilo al pdf
-        $html .= '<style>' . file_get_contents('../estructura/css/estilos.css') . '</style>';
+        $html .= '<style>' . file_get_contents('../../../Vista/estructura/css/styles.css') . '</style>';
 
         //Mandamos el formato realizado arriba para que sea escrito dentro del pdf
         $pdf->writeHTML($html);

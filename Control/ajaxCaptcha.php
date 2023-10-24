@@ -5,9 +5,10 @@ if (isset ($_POST)){
   $cookieCapcha = $_COOKIE["captcha"];
 
   if ($captcha != $cookieCapcha ){
+    
     $respuesta = array("validacion" => "captcha", "error" => "Captcha incorrecto");
-  }
-  else{
+
+  } else {
 
     $respuesta = array("validacion" => "exito");
     
