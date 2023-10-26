@@ -6,7 +6,7 @@
 <title>Calendario de Eventos</title>
 
 <!--Scripts CSS-->
-<link rel="stylesheet" href="../estructura/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../Utiles/librerias/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="../estructura/css/datatables.min.css">
 <link rel="stylesheet" href="../estructura/css/bootstrap-clockpicker.css">
 <link rel="stylesheet" href="../estructura/fullcalendar/main.css">
@@ -15,8 +15,9 @@
 
 <!--Scripts JS-->
 <script src="../estructura/js/jquery-3.6.0.min.js"></script>
-<script src="../estructura/js/popper.min.js"></script>
-<script src="../estructura/js/bootstrap.min.js"></script>
+<!--<script src="../estructura/js/popper.min.js"></script>
+<script src="../estructura/js/bootstrap.min.js"></script>-->
+<script src="../../Utiles/librerias/bootstrap/bootstrap.bundle.min.js"></script>
 <script src="../estructura/js/datatables.min.js"></script>
 <script src="../estructura/js/bootstrap-clockpicker.js"></script>
 <script src="../estructura/js/moment-with-locales.js"></script>
@@ -30,13 +31,13 @@
 <div class="card">
   <ul class="nav nav-underline">
     <li class="nav-item">
-      <a class="nav-link active" href="home.php">Home</a>
+      <a class="nav-link" href="home.php">Home</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="formularioCV.php">Crear CV</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#" aria-current="page">Calendario</a>
+      <a class="nav-link active" href="#" aria-current="page">Calendario</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="../../index.php">Salir</a>
