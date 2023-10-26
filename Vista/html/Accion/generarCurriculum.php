@@ -20,7 +20,7 @@ if ($_FILES['imagen']["error"] <= 0) {
     $nombreImagen = $_FILES['imagen']['name'];
     $esFormato = $verImagen->analizarArchivo($nombreImagen);
     if ($esFormato) {
-        $directorio = "../../../Foto"; //Ubicación donde se guarda la imagen de manera local
+        $directorio = "../../../Archivos/Foto/"; //Ubicación donde se guarda la imagen de manera local
         $nombreImagen = uniqid() . "_" . $imagen['name']; //Le da un único id a la imagen
         $ruta = $directorio . $nombreImagen; //Ruta del directorio
         move_uploaded_file($imagen['tmp_name'], $ruta); //Lo guarda en el directorio

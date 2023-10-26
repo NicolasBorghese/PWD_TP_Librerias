@@ -18,7 +18,10 @@ include_once('../estructura/encabezado.php');
       <a class="nav-link" href="formularioCV.php">Crear CV</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Calendario</a>
+      <a class="nav-link" href="calendario.php">Calendario</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../index.php">Salir</a>
     </li>
   </ul>
 </div>

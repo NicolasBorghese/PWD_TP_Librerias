@@ -255,5 +255,21 @@ class BaseDatos extends PDO {
     private function getResultado(){
         return $this->resultado;
     }
+
+
+    /* Funciones necesarias para la librería del calendario */
+
+    public function devolverEventos($sql){
+        /*  $resultado=parent::query($sql);
+        $res = mysqli_fetch_all($resultado, MYSQLI_ASSOC); */
+        $this->EjecutarSelect($sql);
+        $resultado=$this->getResultado();
+        return $resultado;
+    }
+
+    public function ejecutarUpdate($sql){
+        $resultado=parent::query($sql);
+        return $resultado;
+    }
    
 } 

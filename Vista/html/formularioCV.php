@@ -33,7 +33,10 @@ include_once('../estructura/encabezado.php');
       <a class="nav-link active" aria-current="page" href="#">Crear CV</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Calendario</a>
+      <a class="nav-link" href="calendario.php">Calendario</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../index.php">Salir</a>
     </li>
   </ul>
 </div>
@@ -153,6 +156,6 @@ include_once('../estructura/encabezado.php');
         })();
     </script>
 
-</body>
-
-</html>
+<?php
+  include_once('../estructura/pie.php');
+?>
