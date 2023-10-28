@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    
-
   $('.clockpicker').clockpicker();
 
   let calendario1 = new FullCalendar.Calendar(document.getElementById('Calendario1'),{
@@ -14,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
       right: 'dayGridMonth,timeGridWeek,timeGridDay'
     },
     editable: true,
-    events: 'accionEventos.php',
+    events: 'Accion/accionEventos.php',
     /* events: 'datoseventos.php?accion=listar', */
     dateClick: function(info){
       limpiarFormulario();
@@ -98,15 +96,12 @@ document.addEventListener("DOMContentLoaded", function(){
     $('#FormularioEventos').modal('hide');
   });
 
-  
-
-
   //funciones para comunicarse con el servidor
   function agregarRegistro(registro) {
     $.ajax({
       type: 'POST',
       /* url: 'datoseventos.php?accion=agregar', */
-      url: 'accionEventosAgregar.php',
+      url: 'Accion/accionEventosAgregar.php',
       data: registro,
       success: function(msg){
         calendario1.refetchEvents();
@@ -121,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function(){
     $.ajax({
       type: 'POST',
       /* url: 'datoseventos.php?accion=modificar', */
-      url: 'accionEventosModificar.php',
+      url: 'Accion/accionEventosModificar.php',
       data: registro,
       success: function(msg){
         calendario1.refetchEvents();
@@ -135,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function(){
   function borrarRegistro(registro){
     $.ajax({
       type: 'POST',
-      url: 'accionEventosBorrar.php',
+      url: 'Accion/accionEventosBorrar.php',
       /* url: 'datoseventos.php?accion=borrar', */
       data: registro,
       success: function(msg){
@@ -146,9 +141,6 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     });
   }
-
-  
-
 
   //funciones que interactuan con el FormularioEventos
 

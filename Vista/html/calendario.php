@@ -7,6 +7,7 @@
 
 <!--Scripts CSS-->
 <link rel="stylesheet" href="../../Utiles/librerias/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../estructura/css/bootstrap.min.css">
 <link rel="stylesheet" href="../estructura/css/datatables.min.css">
 <link rel="stylesheet" href="../estructura/css/bootstrap-clockpicker.css">
 <link rel="stylesheet" href="../estructura/fullcalendar/main.css">
@@ -15,15 +16,14 @@
 
 <!--Scripts JS-->
 <script src="../estructura/js/jquery-3.6.0.min.js"></script>
-<!--<script src="../estructura/js/popper.min.js"></script>
-<script src="../estructura/js/bootstrap.min.js"></script>-->
-<script src="../../Utiles/librerias/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../estructura/js/popper.min.js"></script>
+<script src="../estructura/js/bootstrap.min.js"></script>
+<!--<script src="../../Utiles/librerias/bootstrap/bootstrap.bundle.min.js"></script>-->
 <script src="../estructura/js/datatables.min.js"></script>
 <script src="../estructura/js/bootstrap-clockpicker.js"></script>
 <script src="../estructura/js/moment-with-locales.js"></script>
 <script src="../estructura/fullcalendar/main.js"></script>
 <script src="../estructura/js/calendar.js"></script>
-
 
 </head>
 <body>
@@ -57,10 +57,8 @@
         <div class="calendario col-md-8 offset-md-2">
           <div id="Calendario1" style="border: 1px solid #000; padding:2px"></div>
         </div>
-       
       </div>
     </div>
-
 
     <!-- Modal de Eventos -->
     <div class="modal fade" id="FormularioEventos" tabindex="-1" role="dialog">
@@ -96,7 +94,7 @@
               <div class="form-group col-5" id="TituloHoraInicio">
                 <label>Hora de inicio:</label>
                 <div class="input-group clockpicker" data-autoclose="true">
-                  <input type="text" id="HoraInicio" value="" class="form-control" autocomplete="off">
+                  <input type="text" id="HoraInicio" value="" class="form-control" autocomplete="off" readonly>
                 </div>
               </div>
             </div>
@@ -113,12 +111,11 @@
               <div class="form-group col-5" id="TituloHoraFin">
                 <label for="">Hora de fin:</label>
                 <div class="input-group clockpicker" data-autoclose="true">
-                  <input type="text" id="HoraFin" class="form-control" autocomplete="off">
+                  <input type="text" id="HoraFin" class="form-control" autocomplete="off" readonly>
                 </div>
               </div>
             </div>
           </div>
-        
 
           <div class="container-align-center">
             <div class="row col-10 offset-1">
@@ -154,8 +151,6 @@
 
 
     <script>
-
-    
     </script>
 
 
